@@ -1,0 +1,36 @@
+digraph CFG {
+b [label= "b
+add b c
+mov a b
+mov d b
+add c b
+add c d
+mov e c
+", shape=box]
+b -> c
+c [label= "c
+cmp a d
+je
+", shape=box]
+c -> d
+c -> e
+d [label= "d
+mul a d
+mov f a
+mul d a
+add d 4
+mov g d
+mov b 5
+", shape=box]
+d -> g
+e [label= "e
+div a d
+mov f a
+div d a
+mov g d
+", shape=box]
+e -> g
+g [label= "g
+div d a
+", shape=box]
+}

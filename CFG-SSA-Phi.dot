@@ -1,0 +1,32 @@
+digraph CFG {
+b [label= "b
+b1 <- add b0 c0
+b2 <- add b1 c0
+c1 <- add c0 b2
+c2 <- add c1 d1
+", shape=box]
+b -> c
+c [label= "c
+cmp a1 d1
+je
+", shape=box]
+c -> d
+c -> e
+d [label= "d
+a2 <- mul a1 d1
+d2 <- mul d1 a2
+d3 <- add d2 4
+", shape=box]
+d -> g
+e [label= "e
+a3 <- div a2 d3
+d4 <- div d3 a3
+", shape=box]
+e -> g
+g [label= "g
+phi d4 d3
+phi a3 a2
+a4 <- mul a4 d5
+d5 <- div d5 a5
+", shape=box]
+}

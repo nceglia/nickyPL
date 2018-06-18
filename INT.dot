@@ -1,0 +1,37 @@
+graph CFG {
+b1 [shape=oval]
+b1 -- b0
+b1 -- c0
+b0 [shape=oval]
+c0 [shape=oval]
+c0 -- b2
+b2 [shape=oval]
+b2 -- b1
+c1 [shape=oval]
+c1 -- c0
+c1 -- c2
+c2 [shape=oval]
+d1 [shape=oval]
+d1 -- c1
+d1 -- a2
+a2 [shape=oval]
+a2 -- a3
+a2 -- d3
+a1 [shape=oval]
+a1 -- d1
+d2 [shape=oval]
+d2 -- d1
+d2 -- d3
+d3 [shape=oval]
+d3 -- d4
+d4 [shape=oval]
+a3 [shape=oval]
+a3 -- d3
+a5 [shape=oval]
+a5 -- a4
+a5 -- d5
+a4 [shape=oval]
+d5 [shape=oval]
+d6 [shape=oval]
+d6 -- a5
+}

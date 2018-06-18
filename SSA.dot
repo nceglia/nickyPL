@@ -1,0 +1,30 @@
+graph CFG {
+a[label= "Main", shape=box]
+b[label="
+MOVE 1 A0
+MOVE 2 A1
+MOVE 3 A2
+CMP A1 A0", shape=box]
+a -- b
+c[label="
+ADD 1 A0
+CMP A1 A0", shape=box]
+b -- c
+d[label="
+MUL 4 A0", shape=box]
+c -- d
+f[label="Join"]
+d -- f
+c -- f
+e[label="Join"]
+c -- e
+b -- e
+f[label="
+ADD 5 A1
+ADD 1 A0", shape=box]
+e -- f
+g[label="
+WRITE A0
+WRITENL", shape=box]
+f -- g
+}

@@ -1,0 +1,8 @@
+digraph CFG {
+b [shape=oval]
+b -> c
+c [shape=oval]
+c -> d
+c -> g
+c -> e
+}
